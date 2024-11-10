@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EmotionalTestView: View {
-    @StateObject var questions = Questions()
+    
+    @StateObject var viewModel = EmotionalTestViewModel()
     
     var body: some View {
         NavigationStack {
@@ -16,15 +17,14 @@ struct EmotionalTestView: View {
                 MainTitle(title: "Emotional intelligence test")
                 
                 ScrollView {
-                    ForEach(questions.questions.indices, id: \.self) { index in
-                        QuestionCell(question: $questions.questions[index])
+                    ForEach(viewModel.questions.indices, id: \.self) { index in
+                        QuestionCell(question: $viewModel.questions[index])
                     }
                 }
                 
-                if questions.canSumbit() {
-                    let result = questions.getResult()
+                if viewModel.canSumbit() {
                     NavigationLink {
-                        EmotionalTestResultView(result: result)
+                        EmotionalTestResultView(result: viewModel.getResult())
                     } label: {
                         ButtonLabel(title: "Submit", width: 280)
                     }

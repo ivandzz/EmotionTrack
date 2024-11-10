@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TipDetailView: View {
-    @ObservedObject var manager: TipsManager
+    
+    @ObservedObject var viewModel: TipsListViewModel
     @State var tip: Tip
     
     var body: some View {
@@ -39,7 +40,7 @@ struct TipDetailView: View {
             }
             
             HStack {
-                if let previous = manager.previous(for: tip) {
+                if let previous = viewModel.previous(for: tip) {
                     Button(action: {
                         tip = previous
                     }, label: {
@@ -49,7 +50,7 @@ struct TipDetailView: View {
                 
                 Spacer()
                 
-                if let next = manager.next(for: tip) {
+                if let next = viewModel.next(for: tip) {
                     Button(action: {
                         tip = next
                     }, label: {
@@ -62,5 +63,5 @@ struct TipDetailView: View {
 }
 
 #Preview {
-    TipDetailView(manager: TipsManager.shared, tip: Tip(emoji: "🤔", title: "Reflect on your own emotions", description: "For example, think about how you usually respond to an email that makes you angry. By identifying your own emotions and reactions, you become more mindful and begin to control them."))
+    TipDetailView(viewModel: TipsListViewModel.shared, tip: Tip(emoji: "🤔", title: "Reflect on your own emotions", description: "For example, think about how you usually respond to an email that makes you angry. By identifying your own emotions and reactions, you become more mindful and begin to control them."))
 }

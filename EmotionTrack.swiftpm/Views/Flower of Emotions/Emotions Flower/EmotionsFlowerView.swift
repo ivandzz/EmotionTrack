@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EmotionsFlowerView: View {
-
+    
     @StateObject var viewModel = EmotionsFlowerViewModel()
     
     var body: some View {
@@ -68,7 +68,7 @@ struct EmotionsFlowerView: View {
                 
                 Spacer()
                 
-                if viewModel.result.contains(.white) {
+                if viewModel.colors.contains(.white) {
                     Text("Choose a color for all petals")
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -76,7 +76,7 @@ struct EmotionsFlowerView: View {
                         .padding()
                 } else {
                     NavigationLink {
-                        EmotionsFlowerResultView(result: viewModel.result.removingDuplicates())
+                        EmotionsFlowerResultView(result: viewModel.getResult())
                     } label: {
                         ButtonLabel(title: "Done", width: 280)
                     }
@@ -84,10 +84,9 @@ struct EmotionsFlowerView: View {
             }
         }
         .alert("Welcome!", isPresented: $viewModel.showingAlert) { }
-    message: {
-        Text("A person can experience a large number of emotions. Understanding and accepting your emotions is the first step to learning how to manage them. The Emotion Flower will help you better understand your emotions and your emotional state.")
-    }
-        
+        message: {
+            Text("A person can experience a large number of emotions. Understanding and accepting your emotions is the first step to learning how to manage them. The Emotion Flower will help you better understand your emotions and your emotional state.")
+        }
     }
     
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuestionCell: View {
     
-    @StateObject var questions = Questions()
+    @StateObject var viewModel = EmotionalTestViewModel()
     @Binding var question: Question
     
     var body: some View {
@@ -17,7 +17,7 @@ struct QuestionCell: View {
             Text(question.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            ForEach(questions.answers, id:\.self) { choice in
+            ForEach(viewModel.answers, id:\.self) { choice in
                 HStack {
                     Button(action: {
                         question.choice = choice

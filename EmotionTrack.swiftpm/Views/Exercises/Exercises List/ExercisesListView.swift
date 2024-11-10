@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExercisesListView: View {
     
-    @StateObject var manager: ExercisesManager = ExercisesManager.shared
+    @StateObject var viewModel: ExercisesListViewModel = ExercisesListViewModel.shared
     
     var body: some View {
         NavigationStack {
@@ -21,9 +21,9 @@ struct ExercisesListView: View {
                         .font(.body)
                         .padding(.vertical)
                     
-                    ForEach(manager.exercisesList) { exercise in
+                    ForEach(viewModel.exercises) { exercise in
                         NavigationLink {
-                            ExerciseDetailView(manager: manager, exercise: exercise)
+                            ExerciseDetailView(viewModel: viewModel, exercise: exercise)
                                 .toolbar(.hidden, for: .tabBar)
                         } label: {
                             ListCell(emoji: exercise.emoji, title: exercise.title)

@@ -9,23 +9,21 @@ import SwiftUI
 
 struct EmotionsFlowerResultView: View {
     
-    var result: [Color]
+    var result: [ColorDetails]
     
     var body: some View {
         VStack {
             List {
                 ForEach(result, id: \.self) { color in
-                    let colorDetails = getColorDetails(for: color)
-                    
                     NavigationLink {
-                        ResultDetailsView(color: color, colorDetails: colorDetails)
+                        ResultDetailsView(color: color)
                     } label: {
                         HStack {
-                            Text(colorDetails.emoji)
+                            Text(color.emoji)
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading) {
-                                Text(colorDetails.title)
+                                Text(color.title)
                                     .font(.headline)
                                 
                                 Text("Tap for details")
@@ -43,5 +41,5 @@ struct EmotionsFlowerResultView: View {
 }
 
 #Preview {
-    EmotionsFlowerResultView(result: [.red])
+    EmotionsFlowerResultView(result: [ColorDetails(emoji: "🤩", title: "Ecstasy", description: "Ecstasy is a state of intense happiness, joy, and satisfaction. It is often described as a feeling of euphoria where you feel as if you are on top of the world. \nIt can be caused by a variety of factors, such as: \n• Spiritual experiences: Prayer, meditation, or other religious practices can lead to a sense of oneness with something greater than oneself, which can cause ecstasy. \n• Creativity: Art, music, and other creative pursuits can give people a sense of fulfillment and satisfaction, which can lead to ecstasy.\n• Love: Deep feelings of love for a partner, child, or other person can lead to ecstasy. \nIt is important to note that ecstasy is a temporary state. It cannot last forever, and it is important not to chase it constantly.")])
 }

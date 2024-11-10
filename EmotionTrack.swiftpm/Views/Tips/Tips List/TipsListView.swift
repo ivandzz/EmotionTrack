@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TipsListView: View {
     
-    @StateObject var manager: TipsManager = TipsManager.shared
+    @StateObject var viewModel: TipsListViewModel = TipsListViewModel.shared
     
     var body: some View {
         NavigationStack {
@@ -21,9 +21,9 @@ struct TipsListView: View {
                         .font(.body)
                         .padding(.vertical)
                     
-                    ForEach(manager.tipList) { tip in
+                    ForEach(viewModel.tips) { tip in
                         NavigationLink {
-                            TipDetailView(manager: manager, tip: tip)
+                            TipDetailView(viewModel: viewModel, tip: tip)
                                 .toolbar(.hidden, for: .tabBar)
                         } label: {
                             ListCell(emoji: tip.emoji, title: tip.title)

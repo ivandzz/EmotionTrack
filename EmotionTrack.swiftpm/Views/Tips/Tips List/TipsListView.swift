@@ -23,10 +23,10 @@ struct TipsListView: View {
                     
                     ForEach(manager.tipList) { tip in
                         NavigationLink {
-                            TipsDetailView(manager: manager, tip: tip)
+                            TipDetailView(manager: manager, tip: tip)
                                 .toolbar(.hidden, for: .tabBar)
                         } label: {
-                            ListItem(emoji: tip.emoji, title: tip.title)
+                            ListCell(emoji: tip.emoji, title: tip.title)
                         }
                     }
                 }

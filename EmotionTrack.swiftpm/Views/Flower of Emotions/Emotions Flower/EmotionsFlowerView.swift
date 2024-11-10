@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmotionsFlowerView: View {
 
-    @StateObject var viewModel = EmotionFlowerViewModel()
+    @StateObject var viewModel = EmotionsFlowerViewModel()
     
     var body: some View {
         NavigationStack {

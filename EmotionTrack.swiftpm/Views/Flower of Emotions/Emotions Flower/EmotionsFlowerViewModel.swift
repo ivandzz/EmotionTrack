@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class EmotionFlowerViewModel: ObservableObject {
+final class EmotionsFlowerViewModel: ObservableObject {
     
     @Published var selectedColor: Color = .yellow
     

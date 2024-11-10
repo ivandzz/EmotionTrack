@@ -23,10 +23,10 @@ struct ExercisesListView: View {
                     
                     ForEach(manager.exercisesList) { exercise in
                         NavigationLink {
-                            ExercisesDetailView(manager: manager, exercise: exercise)
+                            ExerciseDetailView(manager: manager, exercise: exercise)
                                 .toolbar(.hidden, for: .tabBar)
                         } label: {
-                            ListItem(emoji: exercise.emoji, title: exercise.title)
+                            ListCell(emoji: exercise.emoji, title: exercise.title)
                         }
                     }
                 }

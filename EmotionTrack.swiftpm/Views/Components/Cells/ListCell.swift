@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListItem: View {
+struct ListCell: View {
     
     var emoji: String
     
@@ -31,5 +31,5 @@ struct ListItem: View {
 }
 
 #Preview {
-    ListItem(emoji: "💖", title: "Sample Item")
+    ListCell(emoji: "💖", title: "Sample Item")
 }

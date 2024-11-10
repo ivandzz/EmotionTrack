@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExercisesDetailView: View {
+struct ExerciseDetailView: View {
     
     @ObservedObject var manager: ExercisesManager
     @State var exercise: Exercise
@@ -62,5 +62,5 @@ struct ExercisesDetailView: View {
 }
 
 #Preview {
-    ExercisesDetailView(manager: ExercisesManager.shared, exercise: Exercise(emoji: "📔", title: "Diary of emotions", description: "Throughout the day, write down all your emotions and the events that caused them. The goal is to understand yourself better. For visualization, you can use markers to indicate the color of emotions or emoticons. And then set yourself the task of increasing the number of cheerful emoticons. And remember that most events are neutral in themselves. And emotions are just our reaction to them."))
+    ExerciseDetailView(manager: ExercisesManager.shared, exercise: Exercise(emoji: "📔", title: "Diary of emotions", description: "Throughout the day, write down all your emotions and the events that caused them. The goal is to understand yourself better. For visualization, you can use markers to indicate the color of emotions or emoticons. And then set yourself the task of increasing the number of cheerful emoticons. And remember that most events are neutral in themselves. And emotions are just our reaction to them."))
 }

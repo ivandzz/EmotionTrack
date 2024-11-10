@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TipsDetailView: View {
+struct TipDetailView: View {
     @ObservedObject var manager: TipsManager
     @State var tip: Tip
     
@@ -62,5 +62,5 @@ struct TipsDetailView: View {
 }
 
 #Preview {
-    TipsDetailView(manager: TipsManager.shared, tip: Tip(emoji: "🤔", title: "Reflect on your own emotions", description: "For example, think about how you usually respond to an email that makes you angry. By identifying your own emotions and reactions, you become more mindful and begin to control them."))
+    TipDetailView(manager: TipsManager.shared, tip: Tip(emoji: "🤔", title: "Reflect on your own emotions", description: "For example, think about how you usually respond to an email that makes you angry. By identifying your own emotions and reactions, you become more mindful and begin to control them."))
 }

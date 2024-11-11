@@ -9,6 +9,15 @@ People with developed emotional intelligence are able to communicate effectively
 3. 🧐 **Exercises for EI development:** The app provides exercises designed to enhance emotional intelligence.
 4. 💡 **Tips for EI Development:** The app offers helpful tips and strategies to support the improvement of emotional intelligence.
 
+## 🖼️ Screenshots
+Flower of emotions  | Flower of emotions results | EI Test  |
+:------------------:|:--------------------------:|:--------:|
+![](https://github.com/ivandzz/EmotionTrack/assets/148357385/9e4410ee-836a-4f99-824b-10fcfa37701a)  |  ![](https://github.com/ivandzz/EmotionTrack/assets/148357385/32de6d82-80b0-46ca-8737-8d4faa3dd98a) | ![](https://github.com/ivandzz/EmotionTrack/assets/148357385/47ff1e1b-0770-4b34-9863-b2c4220fdf7b) 
+
+
+## 🛠️ Technology Stack
+1. **SwiftUI** - for user interface
+
 ## 🚀 Getting Started
 **Prerequisites:**
 1. Xcode 14+ 
@@ -22,15 +31,6 @@ cd EmotionTrack
 ```
 2. Run the project: <br>
 Open the project in Xcode or Playgrounds and run the app on a simulator or a real device.
-
-## 🖼️ Screenshots
-Flower of emotions  | Flower of emotions results | EI Test  |
-:------------------:|:--------------------------:|:--------:|
-![](https://github.com/ivandzz/EmotionTrack/assets/148357385/9e4410ee-836a-4f99-824b-10fcfa37701a)  |  ![](https://github.com/ivandzz/EmotionTrack/assets/148357385/32de6d82-80b0-46ca-8737-8d4faa3dd98a) | ![](https://github.com/ivandzz/EmotionTrack/assets/148357385/47ff1e1b-0770-4b34-9863-b2c4220fdf7b) 
-
-
-## 🛠️ Technology Stack
-1. **SwiftUI** - for user interface
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
